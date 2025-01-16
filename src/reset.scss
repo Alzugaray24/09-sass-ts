@@ -1,19 +1,9 @@
 @font-face {
-  font-family: 'NType82-bold';
-  src: url('path/to/NType82-bold.woff2') format('woff2'),
-       url('path/to/NType82-bold.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Noto Sans Thai';
-  src: url('path/to/NotoSansThai.woff2') format('woff2'),
-       url('path/to/NotoSansThai.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'NType82Mono';
-  src: url('path/to/NType82Mono.woff2') format('woff2'),
-       url('path/to/NType82Mono.woff') format('woff');
+  font-family: 'Ndot-55';
+  src: url('/path/to/fonts/Ndot-55.woff2') format('woff2'),
+       url('/path/to/fonts/Ndot-55.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 * {
@@ -23,5 +13,9 @@
 }
 
 html {
-   font-family: "NType82-bold", 'Noto Sans Thai', 'NType82Mono';
+  font-family: "NType82-bold", 'Noto Sans Thai', 'NType82Mono';
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Ndot-55";
 }
