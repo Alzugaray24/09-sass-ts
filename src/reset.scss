@@ -1,21 +1,12 @@
-@font-face {
-  font-family: 'Ndot-55';
-  src: url('/path/to/fonts/Ndot-55.woff2') format('woff2'),
-       url('/path/to/fonts/Ndot-55.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  font-family: "NType82-bold", 'Noto Sans Thai', 'NType82Mono';
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Ndot-55";
+h2 {
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 55px !important;
 }
