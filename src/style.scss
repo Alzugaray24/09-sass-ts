@@ -224,30 +224,50 @@ footer {
   .footer-email__container {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start; 
     width: 50%;
     padding-left: 80px;
-    align-items: start;
-
-
+  
     h3 {
       font-size: 1.2rem;
       font-weight: bold;
       margin-bottom: 10px;
     }
-
-    input[type="email"] {
-      padding: 20px;
-      margin-top: 30px;
+  
+    .footer-email__input-wrapper {
+      position: relative;
       width: 100%;
       max-width: 500px;
-      border: 1px solid #fff;
-      background-color: #000;
-      color: #fff;
-      border-radius: 10px;
+      color: white;
+      
+      .footer-email__input {
+        padding: 20px;
+        width: 100%;
+        border: 1px solid #fff;
+        background-color: #000;
+        color: white;
+        border-radius: 10px;
+        padding-right: 50px; 
 
-      &::placeholder {
-        color: #aaa;
+        > span {
+          font-family: 'Press Start 2P', sans-serif; 
+        }
+  
+        &::placeholder {
+          color: white;
+        }
+      }
+  
+      .footer-email__icon {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.2rem;
+        color: #fff;
+
+        font-family: 'Press Start 2P', sans-serif; 
+        pointer-events: none;
       }
     }
   }

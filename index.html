@@ -250,7 +250,7 @@
               href="https://intl.nothing.tech/pages/power-2"
               class="product__image-link"
             >
-              <video class="product__image-video" muted loop>
+              <video class="product__image-video" muted loop playsinline>
                 <source src="/videos/sexto.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
@@ -483,11 +483,14 @@
         </div>
         <div class="footer-email__container">
           <h3>JOIN OUR MAILING LIST</h3>
-          <input
-            class="footer-email_input"
-            type="email"
-            placeholder="EMAIL ADDRESS"
-          />
+          <div class="footer-email__input-wrapper">
+            <input
+              class="footer-email__input"
+              type="email"
+              placeholder="EMAIL ADDRESS"
+            />
+            <span class="footer-email__icon">></span>
+          </div>
         </div>
       </div>
       <hr />
