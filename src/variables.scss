@@ -1,4 +1,3 @@
-// Variables para colores comunes
 $black: #000;
 $white: #fff;
 $gray-light: #888888;
@@ -13,15 +12,12 @@ $button-bg: #002F6C;
 $footer-bg: #000;
 $footer-text: rgb(206, 206, 206);
 
-// Fuentes comunes
 $font-family: 'Press Start 2P', sans-serif;
 
-// Función para cambiar de formato de píxeles a rem
 @function px-to-rem($px, $base: 16) {
   @return $px / $base * 1rem;
 }
 
-// Función para obtener el color de una paleta a partir de su nombre
 @function get-color($name) {
   @if $name == 'black' {
     @return $black;
@@ -50,31 +46,27 @@ $font-family: 'Press Start 2P', sans-serif;
   }
 }
 
-// Mixins para flexbox con justify-content y align-items
 @mixin container($justify: start, $align: center) {
   display: flex;
   justify-content: $justify;
   align-items: $align;
 }
 
-// Mixins para agregar gap a los contenedores
 @mixin container-gap($gap: 0, $justify: start, $align: center) {
   @include container($justify, $align);
   gap: $gap;
 }
 
-// Variables para tamaño de fuentes comunes
 $font-size-base: 16px;
 $font-size-large: 20px;
 $font-size-small: 12px;
 
-// Variables para los tamaños de los márgenes y paddings comunes
 $spacing-small: 10px;
 $spacing-medium: 20px;
 $spacing-large: 40px;
 $spacing-xlarge: 70px;
 
-// Función para obtener la distancia para márgenes/paddings
+
 @function get-spacing($size) {
   @if $size == 'small' {
     @return $spacing-small;
