@@ -1,17 +1,90 @@
-$gray: #00000052;
+// Variables para colores comunes
+$black: #000;
+$white: #fff;
+$gray-light: #888888;
+$gray-dark: #333333;
+$blue-dark: #002F6C;
+$blue-light: #1DA1F2;
+$background-light: #f5f5f5;
+$background-dark: #111111;
+$highlight-color: rgb(81, 81, 81);
+$highlight-light: rgb(206, 206, 206);
+$button-bg: #002F6C;
+$footer-bg: #000;
+$footer-text: rgb(206, 206, 206);
 
-@mixin container($justify: start) {
-  display: flex;
-  align-items: center;
-  justify-content: $justify;
+// Fuentes comunes
+$font-family: 'Press Start 2P', sans-serif;
+
+// Función para cambiar de formato de píxeles a rem
+@function px-to-rem($px, $base: 16) {
+  @return $px / $base * 1rem;
 }
 
+// Función para obtener el color de una paleta a partir de su nombre
+@function get-color($name) {
+  @if $name == 'black' {
+    @return $black;
+  } @else if $name == 'white' {
+    @return $white;
+  } @else if $name == 'gray-light' {
+    @return $gray-light;
+  } @else if $name == 'gray-dark' {
+    @return $gray-dark;
+  } @else if $name == 'blue-dark' {
+    @return $blue-dark;
+  } @else if $name == 'blue-light' {
+    @return $blue-light;
+  } @else if $name == 'highlight' {
+    @return $highlight-color;
+  } @else if $name == 'highlight-light' {
+    @return $highlight-light;
+  } @else if $name == 'button-bg' {
+    @return $button-bg;
+  } @else if $name == 'footer-bg' {
+    @return $footer-bg;
+  } @else if $name == 'footer-text' {
+    @return $footer-text;
+  } @else {
+    @error "Color not defined: #{$name}";
+  }
+}
 
-@mixin container-gap($gap: 0) {
-  @include container;
+// Mixins para flexbox con justify-content y align-items
+@mixin container($justify: start, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+// Mixins para agregar gap a los contenedores
+@mixin container-gap($gap: 0, $justify: start, $align: center) {
+  @include container($justify, $align);
   gap: $gap;
 }
 
-@function px-to-rem($px, $base: 16) {
-  @return $px / $base * 1rem;
+// Variables para tamaño de fuentes comunes
+$font-size-base: 16px;
+$font-size-large: 20px;
+$font-size-small: 12px;
+
+// Variables para los tamaños de los márgenes y paddings comunes
+$spacing-small: 10px;
+$spacing-medium: 20px;
+$spacing-large: 40px;
+$spacing-xlarge: 70px;
+
+// Función para obtener la distancia para márgenes/paddings
+@function get-spacing($size) {
+  @if $size == 'small' {
+    @return $spacing-small;
+  } @else if $size == 'medium' {
+    @return $spacing-medium;
+  } @else if $size == 'large' {
+    @return $spacing-large;
+  } @else if $size == 'xlarge' {
+    @return $spacing-xlarge;
+  } @else {
+    @error "Spacing size not defined: #{$size}";
+  }
 }
